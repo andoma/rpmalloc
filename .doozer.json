@@ -1,0 +1,71 @@
+{
+  "targets": {
+
+    "xenial-amd64-gcc": {
+      "buildenv": "xenial-amd64",
+      "builddeps": [
+        "build-essential", "ninja-build", "python"
+      ],
+      "buildcmd": ["./configure.py -a x86-64 --toolchain gcc","ninja"]
+    },
+    "xenial-amd64-clang": {
+      "buildenv": "xenial-amd64",
+      "builddeps": [
+        "build-essential", "ninja-build", "clang", "python"
+      ],
+      "buildcmd": ["./configure.py -a x86-64 --toolchain clang","ninja"]
+    },
+    "xenial-i386-gcc": {
+      "buildenv": "xenial-i386",
+      "builddeps": [
+        "build-essential", "ninja-build", "python"
+      ],
+      "buildcmd": ["./configure.py -a x86 --toolchain gcc","ninja"]
+    },
+    "xenial-i386-clang": {
+      "buildenv": "xenial-i386",
+      "builddeps": [
+        "build-essential", "ninja-build", "clang", "python"
+      ],
+      "buildcmd": ["./configure.py -a x86 --toolchain clang","ninja"]
+    },
+
+    "xenial-arm64-gcc": {
+      "buildenv": "xenial-arm64",
+      "builddeps": [
+        "build-essential", "ninja-build", "python"
+      ],
+      "buildcmd": ["./configure.py -a arm64 --toolchain gcc","ninja"]
+    },
+    "xenial-arm64-clang": {
+      "buildenv": "xenial-arm64",
+      "builddeps": [
+        "build-essential", "ninja-build", "clang", "python"
+      ],
+      "buildcmd": ["./configure.py -a arm64 --toolchain clang","ninja"]
+    },
+    "xenial-armhf-gcc": {
+      "buildenv": "xenial-armhf",
+      "builddeps": [
+        "build-essential", "ninja-build", "python"
+      ],
+      "buildcmd": ["./configure.py -a arm7 --toolchain gcc","ninja"]
+    },
+    "xenial-armhf-clang": {
+      "buildenv": "xenial-armhf",
+      "builddeps": [
+        "build-essential", "ninja-build", "clang", "python"
+      ],
+      "buildcmd": ["./configure.py -a arm7 --toolchain clang","ninja"]
+    },
+
+    "osx": {
+      "buildenv": "osx",
+      "homebrew": {
+        "formulae": ["ninja"]
+      },
+      "buildcmd": ["./configure.py ","ninja"]
+    },
+  }
+}
+
